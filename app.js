@@ -1,1 +1,4 @@
-console.log('I am in a separate file')
+document.getElementById('iphn-plus').addEventListener('click',function(){
+  phoneQuantity = document.getElementById('iphn-q').value;
+  phonePrice = document.getElementById('')
+})
