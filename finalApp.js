@@ -10,11 +10,21 @@ function updateProductNumber(isIncreasing,product,rate){
   caseInput.value = caseNumber
   var caseTotal = document.getElementById(product+'-total')
   caseTotal.innerHTML = caseNumber * rate;
+  calcutateTotal()
+  
 }
+// sub-total count
+function getInputValue(product){
+  const productInput =document.getElementById(product+'-number')
+  const productNumber = parseInt(productInput.value)
+  return productNumber;
+}
+
 function calcutateTotal(){
-  let phoneInput = document.getElementById('phone-number')
-  let phoneNumber = parseInt(phoneInput.value)
-  const phoneTotal= phoneNumber +
+ 
+  const phoneTotal= getInputValue("phone") * 1219
+  const caseTotal = getInputValue('case') *59
+  document.getElementById('sub-total').innerHTML = phoneTotal + caseTotal
 }
 
 //case number update
@@ -35,3 +45,5 @@ document.getElementById('case-minus').addEventListener('click',function(){
   updateProductNumber(false,'phone',1219)
   
  })
+
+//  eend
