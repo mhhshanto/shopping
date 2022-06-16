@@ -11,6 +11,11 @@ function updateProductNumber(isIncreasing,product,rate){
   var caseTotal = document.getElementById(product+'-total')
   caseTotal.innerHTML = caseNumber * rate;
 }
+function calcutateTotal(){
+  let phoneInput = document.getElementById('phone-number')
+  let phoneNumber = parseInt(phoneInput.value)
+  const phoneTotal= phoneNumber +
+}
 
 //case number update
 document.getElementById('case-plus').addEventListener('click',function(){
