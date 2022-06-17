@@ -24,7 +24,15 @@ function calcutateTotal(){
  
   const phoneTotal= getInputValue("phone") * 1219
   const caseTotal = getInputValue('case') *59
-  document.getElementById('sub-total').innerHTML = phoneTotal + caseTotal
+const subTotal =phoneTotal+caseTotal
+const tax = subTotal / 10;
+const allTotal = subTotal + tax
+
+  // upddate on html
+  document.getElementById('sub-total').innerHTML = subTotal
+  document.getElementById('tax-amount').innerHTML = tax
+  document.getElementById('total-price').innerHTML = allTotal
+
 }
 
 //case number update
@@ -46,4 +54,4 @@ document.getElementById('case-minus').addEventListener('click',function(){
   
  })
 
-//  eenddd
+//  eendddd
